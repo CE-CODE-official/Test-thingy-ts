@@ -1,3 +1,64 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111f"><title>ABYSS//RUN — Marine Roguelike</title><link rel="stylesheet" href="/style.css"></head>
-<body><div id="app"><header><div class="brand"><span class="brand-mark">◈</span><div><b>ABYSS//RUN</b><small>MARINE EXTERMINATION PROTOCOL</small></div></div><div class="hud"><span>WAVE <b id="wave">1</b></span><span>TIME <b id="time">00:00</b></span><span>LVL <b id="level">1</b></span><span>XP <b id="xp">0/10</b></span><span class="shells">🐚 <b id="shells">0</b></span></div></header><main><canvas id="game" aria-label="Abyss Run game"></canvas><div class="crosshair"></div><section id="start" class="overlay"><div class="panel title-panel"><p class="eyebrow">THE OCEAN REMEMBERS</p><h1>ABYSS<span>//</span>RUN</h1><p class="tag">One diver. Infinite depths. Absolutely zero chill.</p><button id="startBtn">DESCEND <span>→</span></button><div class="tips">WASD / ARROWS MOVE · AUTO-FIRE · SURVIVE · EVOLVE</div></div></section><section id="levelup" class="overlay hidden"><div class="panel"><p class="eyebrow">MUTATION DETECTED</p><h2>CHOOSE YOUR <em>UPGRADE</em></h2><div id="choices" class="choices"></div></div></section><section id="gameover" class="overlay hidden"><div class="panel"><p class="eyebrow">SIGNAL LOST</p><h2>THE ABYSS <em>WON.</em></h2><div class="run-stats"><b id="finalWave">WAVE 1</b><b id="finalKills">0 CREATURES</b><b id="finalShells">0 SHELLS</b></div><button id="restartBtn">DIVE AGAIN ↻</button></div></section><aside class="status"><div class="bar"><span id="hpBar"></span></div><div class="status-row"><b id="hpText">100 / 100</b><span id="weaponText">HARPOON // MK-I</span></div><div id="buffs" class="buffs"></div></aside><div id="toast" class="toast"></div></main></div><script src="/app.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061923">
+<title>ABYSS//RUN — Marine Roguelike</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="brand">
+      <div class="brand-mark">🐢</div>
+      <div><b>ABYSS//RUN</b><small>MARINE EXTERMINATION PROTOCOL</small></div>
+    </div>
+    <div class="hud">
+      <span>WAVE <b id="wave">1</b></span>
+      <span>TIME <b id="time">00:00</b></span>
+      <span>LVL <b id="level">1</b></span>
+      <span>XP <b id="xp">0/10</b></span>
+      <span class="shells">🐚 <b id="shells">0</b></span>
+    </div>
+  </header>
+  <main>
+    <canvas id="game" aria-label="Abyss Run game"></canvas>
+    <div class="vignette"></div>
+    <section id="start" class="overlay">
+      <div class="panel title-panel">
+        <p class="eyebrow">THE OCEAN REMEMBERS</p>
+        <h1>ABYSS<span>//</span>RUN</h1>
+        <p class="tag">One turtle. Infinite depths. Absolutely zero chill.</p>
+        <button id="startBtn" type="button">DESCEND <span>→</span></button>
+        <div class="tips">WASD / ARROWS MOVE · AUTO-AIM · AUTO-FIRE · SURVIVE · EVOLVE</div>
+      </div>
+    </section>
+    <section id="levelup" class="overlay hidden">
+      <div class="panel upgrade-panel">
+        <p class="eyebrow">MUTATION DETECTED</p>
+        <h2>CHOOSE YOUR <em>UPGRADE</em></h2>
+        <p class="upgrade-sub">The run is paused. Pick one enhancement to continue.</p>
+        <div id="choices" class="choices"></div>
+      </div>
+    </section>
+    <section id="gameover" class="overlay hidden">
+      <div class="panel">
+        <p class="eyebrow">SIGNAL LOST</p>
+        <h2>THE ABYSS <em>WON.</em></h2>
+        <div class="run-stats"><b id="finalWave">WAVE 1</b><b id="finalKills">0 CREATURES</b><b id="finalShells">0 SHELLS</b></div>
+        <button id="restartBtn" type="button">DIVE AGAIN ↻</button>
+      </div>
+    </section>
+    <aside class="status">
+      <div class="bar"><span id="hpBar"></span></div>
+      <div class="status-row"><b id="hpText">100 / 100</b><span id="weaponText">HARPOON // MK-I</span></div>
+      <div id="buffs" class="buffs"></div>
+    </aside>
+    <div class="legend"><span>🐟 MINNOW</span><span>🦈 SHARK</span><span>☠ RANGED</span></div>
+    <div id="toast" class="toast"></div>
+  </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
